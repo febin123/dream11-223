@@ -1,0 +1,672 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.back-img img{
+  width: 100vw;
+  /* margin-top: 42px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+}
+.mobile-back img{
+  display: none;
+}
+.down-now{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .back-img{
+    display: none;
+  }
+  .mobile-img img{
+    /* padding-top: 70px; */
+    display: block;
+    width: 93vw;
+  }
+  .mobile-back .down-now{
+    display: block;
+    margin-top: -16vw;
+    margin-left: 22vw;
+    position: absolute;
+    background-color: #fbad18;
+    color: #282829;
+    width: 45vw;
+    height: 10vw;
+    font-weight: 900;
+    font-size: 18px;
+
+  }
+  .download-app{
+    display: none;
+  }
+}
+.download-app{
+    position: absolute;
+    top: 20vw;
+    right: 5vw;
+}
+.download-app h2{
+    font-weight: 900;
+    
+}
+.mobile{
+    margin-top: 1vw;
+}
+.mobile span{
+    font-size: 18px;
+}
+.mobile input{
+    height: 4vh;
+    margin-left: 0vw;
+    border: 2px solid #282829;
+
+}
+.app-link{
+    background-color: #fbad18;
+    margin-top: 1vw;
+    
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 3px solid #282829;
+    cursor: pointer;
+}
+.app-link p{
+    font-weight: 800;
+}
+
+
+/*start of marquee*/
+:root {
+    --marquee-width: 100vw;
+    --marquee-height: 10vh;
+   
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    
+  }
+  
+  .marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #282829;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    top: -0.27vw;
+    
+    
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+  }
+  .marquee-content {
+
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+  .marquee-content p{
+    color: white;
+    padding-left: 15px;
+    font-size: 18px;
+  }
+  .marquee-content span{
+  color: #fbad18;font-size: 20px;font-weight: bold;
+  }
+  
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+    white-space: nowrap;
+  }
+  
+  .marquee-content li img {
+    width: 80%;
+    
+    border: 2px solid #eee;
+  }
+  
+  @media (max-width: 600px) {
+    html { font-size: 5px; }
+    :root {
+      --marquee-width: 100vw;
+      --marquee-height: 5vh;
+      --marquee-elements-displayed: 2;
+      
+    }
+    .marquee:before, .marquee:after { width: 2rem; }
+    .marquee {
+      width: 93vw;
+      height: 50px;
+    }
+    .marquee-content p{
+      color: white;
+      padding-left: 7px;
+      font-size: 13px;
+    }
+    .marquee-content span{
+    color: #fbad18;font-size: 15px;font-weight: bold;
+    
+    }
+    
+  }
+  /*end of marquee*/  
+
+  /*start of steps*/
+.play-heading{
+  text-align: center;
+  margin-top: 3vw;
+}
+.yellow{
+  color: #fbad18;
+}
+.step1 h1{
+ margin-top: 5vw;
+  margin-left: 9vw;
+}
+.step1 p{
+  margin-left: 8vw;
+}
+.step2 h1{
+  margin-top: -43vw;
+  margin-left: 35vw;
+}
+.step2 p{
+  margin-top: 0vw;
+  margin-left: 34vw;
+}
+.step2 img{
+  margin-left:25vw;
+}
+.step3 h1{
+  margin-top: -43vw;
+  margin-left: 60vw;
+}
+.step3 p{
+  margin-top: 0vw;
+  margin-left: 59vw;
+}
+.step3 img{
+  margin-left:50vw;
+}
+.step4 h1{
+  margin-top: -43vw;
+  margin-left: 85vw;
+}
+.step4 p{
+  margin-top: 0vw;
+  margin-left: 84vw;
+}
+.step4 img{
+  margin-left:75vw;
+}
+@media only screen and (max-width: 600px) {
+  .play-heading{
+    font-size: 12px;
+    text-align: center;
+    margin-right: 12vw;
+  }
+  .play-steps .step1 h1{
+    font-size: 22px;
+    text-align: center;
+    margin-right: 25vw;
+  }
+  .play-steps .step1 p{
+    font-size: 22px;
+    text-align: center;
+    margin-right: 25vw;
+  }
+  .play-steps .step1 img{
+    width: 70vw;
+    margin-left:8vw;
+
+  }
+  .play-steps .step2 h1{
+    font-size: 22px;
+    text-align: center;
+    margin-right: 50vw;
+    margin-top: 50vw;
+  }
+  .play-steps .step2 p{
+    font-size: 22px;
+    /* text-align: center; */
+    
+    margin-left: 0vw;
+  }
+  .play-steps .step2 img{
+    width: 70vw;
+    margin-left:-18vw;
+
+  }
+  .play-steps .step3 h1{
+    font-size: 22px;
+    text-align: center;
+    margin-left: -70vw;
+    margin-top: 50vw;
+  }
+  .play-steps .step3 p{
+    font-size: 22px;
+    margin-left: -30vw;
+
+   
+  }
+  .play-steps .step3 img{
+    width: 70vw;
+    margin-left:-42vw;
+
+  }
+  .play-steps .step4 h1{
+    font-size: 22px;
+    text-align: center;
+    margin-left: -90vw;
+    margin-top: 50vw;
+  }
+  .play-steps .step4 p{
+    font-size: 22px;
+    margin-left: -55vw;
+
+   
+  }
+  .play-steps .step4 img{
+    width: 70vw;
+    margin-left:-65vw;
+
+  }
+}
+  /*end of steps*/
+  /*start of review*/
+  #review{
+    background-color:whitesmoke;
+  }
+.rating-pic img{
+  margin-left: 25vw;
+  width: 50vw;
+  padding-top: 3vw;
+  
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background: #282829;
+  width: 25vw;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 3vw;
+  /* box-shadow: 0px 4px 8px rgba(0,0,0,0.15); */
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #fbad18
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.wrapper .box p{
+  color: white;
+}
+.name{  
+  color: white;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 25px;
+  font-weight: 900;
+  color: #fbad18;
+  
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #fbad18;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #fbad18;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .rating-pic img{
+    width: 70vw;
+    margin-left: 7vw;
+    margin-top: 5vw;
+  }
+  .wrapper .box p{
+    color: white;
+    font-size: 12px;
+  }
+  .box .info .stars i{
+    color: #fbad18;
+    font-size: 12px;
+  }
+}
+
+  /*end of review*/
+  /*start of download*/
+  .download-image img{
+    width: 50vw;
+  }
+  .download-info ol{
+    margin-top: -20vw;
+    margin-left: 55vw;
+  }
+  .download-info .android{
+    margin-top: 2vw;
+    margin-left: 55vw;
+  
+  }
+  .download-info .apple{
+    margin-top: -5vw;
+    margin-left: 73vw;
+  
+  
+  }
+  .download-info .qr{
+    margin-top: 2vw;
+    margin-left: 55vw;
+  
+  
+  }
+  .download-info .qr-data{
+    margin-top: -6vw;
+    margin-left: 10vw;
+  
+  
+  }
+  /*end of download*/
+
+  /*start of faq*/
+  #faq{
+    background-color: whitesmoke;
+  }
+  .faq-heading{
+    margin-top: 6vw;
+    text-align: center;
+  }
+  .section-faq {
+  
+    padding-top: 50px;
+      padding-bottom: 80px;
+  }
+  
+  .section-faq .header-section {
+      margin-bottom: 70px;
+  }
+  
+  .section-faq .header-section .title {
+  
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+  }
+  
+  .section-faq .header-section .title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #1556a6;
+  }
+  
+  .section-faq .header-section .description {
+    font-size: 20px;
+      opacity: 0.7;
+  }
+  
+  .section-faq .questions .single-question {
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: 20vw;
+  }
+  
+  .section-faq .questions .single-question > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    padding: 11px 20px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .section-faq .questions .single-question:hover > div,
+  .section-faq .questions .active > div {
+    border-color: #1556a6;
+    color: #1556a6;
+  }
+  
+  .section-faq .questions .single-question h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+  }
+  
+  .section-faq .questions .single-question i {
+      font-size: 20px;
+      transition: transform .4s;
+  }
+  
+  .section-faq .questions .active i {
+    transform: rotateX(180deg);
+  }
+  
+  .section-faq .questions .single-question .answer {
+      padding-top: 25px;
+      padding-bottom: 5px;
+      opacity: 0.7;
+      display: none;
+  }
+  
+  .section-faq .question-form {
+    background-color: #f8f8f8;
+      border-radius: 8px;
+      padding: 50px 60px;
+  }
+  
+  .section-faq .question-form .title {
+    font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      margin-bottom: 25px;
+  }
+  
+  .section-faq .question-form form {
+  
+  }
+  
+  .section-faq .question-form form input,
+  .section-faq .question-form form textarea {
+      display: block;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px 15px;
+      transition: all .3s;
+      outline: none;
+  }
+  
+  .section-faq .question-form form input {
+    margin-bottom: 10px;
+  }
+  
+  .section-faq .question-form form textarea {
+    height: 100px;
+    min-height: 50px;
+  }
+  
+  .section-faq .question-form form input:focus,
+  .section-faq .question-form form textarea:focus {
+    background-color: #fff;
+    border-color: #bbb;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+  }
+  
+  .section-faq .question-form form .send-request {
+      font-family: "Poppins", sans-serif;
+      margin-top: 40px;
+      text-transform: uppercase;
+      background-color: #1556a6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 15px 30px;
+      transition: box-shadow .3s;
+  }
+  
+  .section-faq .question-form form .send-request:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  }
+  
+  @media(max-width: 991.9px) {
+    .section-faq .questions {
+        margin-bottom: 60px;
+    }
+  }
+  /*end of faq*/
+
+  /*start of footer*/
+#footer{
+  background-color: #282829;
+}
+.media i{
+  margin-top: 2vw;
+  padding-right: 1vw;
+  color: white;
+}
+.data1{
+  margin-top: -2vw;
+}
+.data1 li{
+color: white;
+margin-left: 40vw;
+padding-bottom: 1vw;
+list-style: none;
+
+}
+.data2{
+  margin-top: -11.5vw;
+}
+.data2 li{
+color: white;
+margin-left: 60vw;
+padding-bottom: 1vw;
+list-style: none;
+
+}
+.member p{
+  color: white;
+
+}
+.member .m1{
+  margin-left: 80vw;
+  margin-top: -10vw
+}
+.member .m2{
+  margin-left: 80vw;
+  margin-top: 2vw
+}
+.member .m1 img{
+  width: 5vw;
+  margin-left: 3vw;
+}
+.member .m2 img{
+  width: 5vw;
+  margin-left: 3vw;
+}
+.address{
+  color: white;
+  text-align: center;
+}
+.terms{
+  color: white;
+  text-align: center;
+}
+.cc{
+  background-color: white;
+  color: #282829;
+  text-align: center;
+}
+  /*end of footer*/
+  @media only screen and (max-width: 600px) {
+    .download-info{
+      display: none;
+    }
+  }
